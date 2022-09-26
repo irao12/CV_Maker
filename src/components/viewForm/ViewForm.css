@@ -1,0 +1,17 @@
+.view-form {
+	margin: 3.6rem auto;
+	padding: 5rem 4rem;
+	width: 80%;
+	max-width: 80rem;
+	height: 100.35rem;
+	font-size: 2rem;
+	border: 0.2rem solid black;
+	border-radius: 0.2rem;
+}
+
+.line-break {
+	width: 100%;
+	margin-top: 2rem;
+	height: 0.25rem;
+	background-color: var(--main-color);
+}
