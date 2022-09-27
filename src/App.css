@@ -3,11 +3,11 @@
 :root {
 	--main-color: #2859c4;
 	--main-color-lighter: #618deb;
+	font-size: 62.5%;
 }
 
 html {
 	font-family: "Montserrat";
-	font-size: 62.5%;
 }
 
 * {
@@ -17,8 +17,6 @@ html {
 }
 
 body {
-	display: flex;
-	flex-direction: column;
 	width: 100%;
 }
 
@@ -30,4 +28,15 @@ header {
 	padding: 2.4rem 0;
 	color: white;
 	background-color: var(--main-color);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 80rem) {
+	main {
+		flex-direction: row;
+	}
 }
