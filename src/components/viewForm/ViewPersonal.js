@@ -3,7 +3,7 @@ import "./ViewPersonal.css";
 import phoneIcon from "../../phone.svg";
 import emailIcon from "../../email.svg";
 import locationIcon from "../../location.svg";
-import ContactSection from "./ContactSection";
+import ContactSection from "./ViewContactSection";
 
 export default class ViewPersonal extends Component {
 	render() {

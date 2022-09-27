@@ -1,53 +1,52 @@
 import React, { Component } from "react";
 import InputField from "./InputField";
-import TextareaField from "./TextareaField";
-import "./ExperienceSection.css";
 import Button from "./Button";
+import TextareaField from "./TextareaField";
 
-export default class ExperienceSection extends Component {
+export default class EducationSection extends Component {
 	render() {
-		const { experience, onChange, deleteExperience, index } = this.props;
+		const { education, index, onChange, deleteEducation } = this.props;
 
 		return (
-			<div className="experience-section">
-				<p>{`Experience ${index + 1}`}</p>
+			<div className="education-section">
+				<p>{`Education ${index + 1}`}</p>
 				<InputField
 					onChange={(event) => {
 						onChange(event, index);
 					}}
-					section="company"
-					value={experience.company}
+					section="program"
+					value={education.program}
 				></InputField>
 				<InputField
 					onChange={(event) => {
 						onChange(event, index);
 					}}
-					section="position"
-					value={experience.position}
+					section="university"
+					value={education.university}
 				></InputField>
 				<InputField
 					onChange={(event) => {
 						onChange(event, index);
 					}}
 					section="start"
-					value={experience.start}
+					value={education.start}
 				></InputField>
 				<InputField
 					onChange={(event) => {
 						onChange(event, index);
 					}}
 					section="end"
-					value={experience.end}
+					value={education.end}
 				></InputField>
 				<TextareaField
 					onChange={(event) => {
 						onChange(event, index);
 					}}
 					section="description"
-					value={experience.description}
+					value={education.description}
 				></TextareaField>
 				<Button
-					handleClick={(event) => deleteExperience(event, index)}
+					handleClick={(event) => deleteEducation(event, index)}
 					className="delete-button"
 					text="delete"
 				></Button>

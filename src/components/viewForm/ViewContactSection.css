@@ -1,0 +1,19 @@
+.contact-info {
+	max-width: 40%;
+	word-break: break-word;
+}
+
+.contact-section {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+	font-size: 1.2rem;
+}
+
+.contact-section img {
+	width: 2.3rem;
+	margin-right: 0.5rem;
+}

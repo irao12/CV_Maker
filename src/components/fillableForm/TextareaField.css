@@ -1,0 +1,11 @@
+textarea {
+	margin-top: 0.7rem;
+	width: 100%;
+	padding: 1rem;
+	font-family: "Montserrat";
+	font-size: 1.6rem;
+	height: 15rem;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	resize: none;
+}

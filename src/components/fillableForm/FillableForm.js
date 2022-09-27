@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Education from "./Education";
 import Experience from "./Experience";
 import "./FillableForm.css";
 import PersonalInfo from "./PersonalInfo";
@@ -7,11 +8,15 @@ export default class FillableForm extends Component {
 	render() {
 		const {
 			addNewExperience,
+			personalInfo,
 			handlePersonalChange,
+			experience,
 			handleExperienceChange,
 			deleteExperience,
-			personalInfo,
-			experience,
+			education,
+			addNewEducation,
+			handleEducationChange,
+			deleteEducation,
 		} = this.props;
 		return (
 			<div className="fillable-form">
@@ -25,6 +30,12 @@ export default class FillableForm extends Component {
 					handleExperienceChange={handleExperienceChange}
 					deleteExperience={deleteExperience}
 				></Experience>
+				<Education
+					addNewEducation={addNewEducation}
+					handleEducationChange={handleEducationChange}
+					deleteEducation={deleteEducation}
+					education={education}
+				></Education>
 			</div>
 		);
 	}

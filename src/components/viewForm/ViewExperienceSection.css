@@ -1,0 +1,28 @@
+.view-experience-section {
+	margin-top: 1.2rem;
+}
+
+.experience-heading {
+	display: flex;
+	justify-content: space-between;
+}
+
+.experience-position {
+	font-size: 1.6rem;
+}
+
+.experience-company {
+	font-size: 1.5rem;
+}
+
+.experience-dates {
+	font-size: 1.4rem;
+	color: rgb(128, 124, 124);
+}
+
+.experience-description {
+	margin-top: 0.8rem;
+	padding-left: 2rem;
+	font-size: 1.4rem;
+	word-break: break-all;
+}

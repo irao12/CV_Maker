@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ViewContactSection.css";
 
 export default class ContactSection extends Component {
 	render() {

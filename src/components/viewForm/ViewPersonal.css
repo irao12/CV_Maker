@@ -9,38 +9,18 @@
 }
 
 .name {
-	font-size: 3.5rem;
+	font-size: 3rem;
 	word-break: break-word;
 	margin-bottom: 0.4rem;
 }
 
 .title {
-	font-size: 2.2rem;
+	font-size: 1.8rem;
 	font-weight: 400;
-}
-
-.contact-info {
-	max-width: 40%;
-	word-break: break-word;
-}
-
-.contact-section {
-	display: flex;
-	align-items: center;
-	margin-bottom: 0.5rem;
-}
-
-.contact-section p {
-	font-size: 1.4rem;
-}
-
-.contact-section img {
-	width: 2.3rem;
-	margin-right: 0.5rem;
 }
 
 .description {
 	margin-top: 2rem;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	word-break: break-all;
 }

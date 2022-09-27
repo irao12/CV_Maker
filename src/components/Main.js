@@ -17,10 +17,16 @@ export default class Main extends Component {
 			experience: [],
 			education: [],
 		};
+
 		this.handlePersonalChange = this.handlePersonalChange.bind(this);
+
 		this.addNewExperience = this.addNewExperience.bind(this);
 		this.handleExperienceChange = this.handleExperienceChange.bind(this);
 		this.deleteExperience = this.deleteExperience.bind(this);
+
+		this.addNewEducation = this.addNewEducation.bind(this);
+		this.handleEducationChange = this.handleEducationChange.bind(this);
+		this.deleteEducation = this.deleteEducation.bind(this);
 	}
 
 	handlePersonalChange(event) {
@@ -75,18 +81,70 @@ export default class Main extends Component {
 		});
 	}
 
+	addNewEducation(event) {
+		this.setState({
+			...this.state,
+			education: [
+				...this.state.education,
+				{
+					program: "",
+					university: "",
+					start: "",
+					end: "",
+					description: "",
+				},
+			],
+		});
+	}
+
+	handleEducationChange(event, index) {
+		const name = event.target.name;
+		this.setState({
+			...this.state,
+			education: [
+				...this.state.education.slice(0, index),
+				{
+					...this.state.education[index],
+					[name]: event.target.value,
+				},
+				...this.state.education.slice(index + 1),
+			],
+		});
+	}
+
+	deleteEducation(event, index) {
+		this.setState({
+			...this.state,
+			education: [
+				...this.state.education.slice(0, index),
+				...this.state.education.slice(index + 1),
+			],
+		});
+	}
+
 	render() {
 		return (
 			<main>
 				<FillableForm
 					addNewExperience={this.addNewExperience}
+					// personalInfo
+					personalInfo={this.state.personalInfo}
 					handlePersonalChange={this.handlePersonalChange}
+					// experience
 					handleExperienceChange={this.handleExperienceChange}
 					deleteExperience={this.deleteExperience}
+					experience={this.state.experience}
+					// education
+					education={this.state.education}
+					addNewEducation={this.addNewEducation}
+					handleEducationChange={this.handleEducationChange}
+					deleteEducation={this.deleteEducation}
+				></FillableForm>
+				<ViewForm
 					personalInfo={this.state.personalInfo}
 					experience={this.state.experience}
-				></FillableForm>
-				<ViewForm personalInfo={this.state.personalInfo}></ViewForm>
+					education={this.state.education}
+				></ViewForm>
 			</main>
 		);
 	}
