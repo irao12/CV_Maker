@@ -11,32 +11,32 @@ export default class PersonalInfo extends Component {
 				<InputField
 					section="name"
 					onChange={onChange}
-					personalInfo={personalInfo}
+					value={personalInfo.name}
 				></InputField>
 				<InputField
 					section="title"
 					onChange={onChange}
-					personalInfo={personalInfo}
+					value={personalInfo.title}
 				></InputField>
 				<InputField
 					section="phone"
 					onChange={onChange}
-					personalInfo={personalInfo}
+					value={personalInfo.phone}
 				></InputField>
 				<InputField
 					section="email"
 					onChange={onChange}
-					personalInfo={personalInfo}
+					value={personalInfo.email}
 				></InputField>
 				<InputField
 					section="location"
 					onChange={onChange}
-					personalInfo={personalInfo}
+					value={personalInfo.location}
 				></InputField>
 				<TextareaField
 					section="description"
 					onChange={onChange}
-					personalInfo={personalInfo}
+					value={personalInfo.description}
 				></TextareaField>
 			</section>
 		);

@@ -2,7 +2,7 @@
 	margin: 3.6rem auto;
 	padding: 1.6rem;
 	width: 80%;
-	max-width: 80rem;
+	max-width: 60rem;
 	font-size: 2rem;
 	border: 0.2rem solid black;
 	border-radius: 0.5rem;
@@ -14,7 +14,7 @@
 
 input,
 textarea {
-	margin: 1rem 0;
+	margin: 0.7rem 0;
 	width: 100%;
 	padding: 1rem;
 	font-family: "Montserrat";
@@ -27,4 +27,9 @@ textarea {
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	resize: none;
+}
+
+.experience {
+	margin-top: 1rem;
+	font-size: 1.6rem;
 }

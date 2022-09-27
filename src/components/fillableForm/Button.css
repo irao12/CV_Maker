@@ -1,0 +1,27 @@
+button {
+	margin-top: 1.6rem;
+	padding: 1.2rem 4.8rem;
+	background-color: var(--main-color);
+	color: white;
+	border: none;
+	border-radius: 0.8rem;
+	font-size: 1.8rem;
+	font-family: "Montserrat";
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--main-color-lighter);
+	color: black;
+}
+
+button.delete-button {
+	background-color: #8f8e8e;
+	padding: 1rem 3rem;
+	position: relative;
+	font-size: 2rem;
+}
+
+button.delete-button:hover {
+	background-color: #bbbbbb;
+}

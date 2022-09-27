@@ -2,14 +2,14 @@ import React, { Component } from "react";
 
 export default class InputField extends Component {
 	render() {
-		const { onChange, personalInfo } = this.props;
+		const { onChange, value, section } = this.props;
 		return (
 			<div>
 				<input
 					type="text"
-					name={this.props.section}
-					placeholder={this.props.section}
-					value={personalInfo[this.props.section]}
+					name={section}
+					placeholder={section}
+					value={value}
 					onChange={onChange}
 				></input>
 			</div>

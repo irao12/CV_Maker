@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 
 :root {
-	--main-color: #6590ec;
+	--main-color: #2859c4;
+	--main-color-lighter: #618deb;
 }
 
 html {
@@ -27,6 +28,6 @@ header {
 	justify-content: center;
 	font-size: 2rem;
 	padding: 2.4rem 0;
-	color: rgb(12, 12, 12);
+	color: white;
 	background-color: var(--main-color);
 }

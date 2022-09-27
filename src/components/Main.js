@@ -11,12 +11,15 @@ export default class Main extends Component {
 				title: "",
 				phone: "",
 				email: "",
-				locaiton: "",
+				location: "",
 				description: "",
 			},
+			experience: [],
+			education: [],
 		};
-
 		this.handlePersonalChange = this.handlePersonalChange.bind(this);
+		this.addNewExperience = this.addNewExperience.bind(this);
+		this.handleExperienceChange = this.handleExperienceChange.bind(this);
 	}
 
 	handlePersonalChange(event) {
@@ -30,12 +33,46 @@ export default class Main extends Component {
 		});
 	}
 
+	addNewExperience(event) {
+		this.setState({
+			...this.state,
+			experience: [
+				...this.state.experience,
+				{
+					company: "",
+					position: "",
+					start: "",
+					end: "",
+					description: "",
+				},
+			],
+		});
+	}
+
+	handleExperienceChange(event, index) {
+		const name = event.target.name;
+		this.setState({
+			...this.state,
+			experience: [
+				...this.state.experience.slice(0, index),
+				{
+					...this.state.experience[index],
+					[name]: event.target.value,
+				},
+				...this.state.experience.slice(index + 1),
+			],
+		});
+	}
+
 	render() {
 		return (
 			<main>
 				<FillableForm
+					addNewExperience={this.addNewExperience}
 					handlePersonalChange={this.handlePersonalChange}
+					handleExperienceChange={this.handleExperienceChange}
 					personalInfo={this.state.personalInfo}
+					experience={this.state.experience}
 				></FillableForm>
 				<ViewForm personalInfo={this.state.personalInfo}></ViewForm>
 			</main>
