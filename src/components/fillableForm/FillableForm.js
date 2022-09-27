@@ -9,6 +9,7 @@ export default class FillableForm extends Component {
 			addNewExperience,
 			handlePersonalChange,
 			handleExperienceChange,
+			deleteExperience,
 			personalInfo,
 			experience,
 		} = this.props;
@@ -22,6 +23,7 @@ export default class FillableForm extends Component {
 					addNewExperience={addNewExperience}
 					experience={experience}
 					handleExperienceChange={handleExperienceChange}
+					deleteExperience={deleteExperience}
 				></Experience>
 			</div>
 		);

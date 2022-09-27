@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export default class ExperienceSection extends Component {
 	render() {
-		const { experience, onChange, index } = this.props;
+		const { experience, onChange, deleteExperience, index } = this.props;
 
 		return (
 			<div className="experience-section">
@@ -45,7 +45,11 @@ export default class ExperienceSection extends Component {
 					section="description"
 					value={experience.description}
 				></InputField>
-				<Button className="delete-button" text="delete"></Button>
+				<Button
+					handleClick={(event) => deleteExperience(event, index)}
+					className="delete-button"
+					text="delete"
+				></Button>
 			</div>
 		);
 	}

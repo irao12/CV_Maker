@@ -20,6 +20,7 @@ export default class Main extends Component {
 		this.handlePersonalChange = this.handlePersonalChange.bind(this);
 		this.addNewExperience = this.addNewExperience.bind(this);
 		this.handleExperienceChange = this.handleExperienceChange.bind(this);
+		this.deleteExperience = this.deleteExperience.bind(this);
 	}
 
 	handlePersonalChange(event) {
@@ -64,6 +65,16 @@ export default class Main extends Component {
 		});
 	}
 
+	deleteExperience(event, index) {
+		this.setState({
+			...this.state,
+			experience: [
+				...this.state.experience.slice(0, index),
+				...this.state.experience.slice(index + 1),
+			],
+		});
+	}
+
 	render() {
 		return (
 			<main>
@@ -71,6 +82,7 @@ export default class Main extends Component {
 					addNewExperience={this.addNewExperience}
 					handlePersonalChange={this.handlePersonalChange}
 					handleExperienceChange={this.handleExperienceChange}
+					deleteExperience={this.deleteExperience}
 					personalInfo={this.state.personalInfo}
 					experience={this.state.experience}
 				></FillableForm>
